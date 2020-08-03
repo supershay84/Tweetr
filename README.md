@@ -3,8 +3,8 @@
 ### 1. Tweetr
 - [Tweetr](https://git.generalassemb.ly/SEIR-526/tweetr)
 
-### 2. Watch - EST TIME: NA
+### 2. Watch 
 
-### 3. Algo Practice - EST TIME: NA
+### 3. Algo Practice
 
-### 4.  Interview Practice - EST TIME: 20min
+### 4.  Interview Practice 
