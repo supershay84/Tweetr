@@ -3,4 +3,4 @@
 # W12D05-HW
 
 ### 1. Tweetr
-- [Tweetr](https://git.generalassemb.ly/SEIR-526/tweetr)
+- [Tweetr](./tweetr.md)
