@@ -3,7 +3,7 @@
 Title: Tweet_r
 Type: Homework
 Creator: Thom Page 
-Topics: Rails 5 API, routes, cURL & Postman
+Topics: Rails 6 API, routes, cURL & Postman
 
 ---
 
