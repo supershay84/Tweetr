@@ -18,11 +18,15 @@ Real Cool Twitter API in the Sky
 <br/>
 
 ## Walkthrough
-We will be making a new Rails app from scratch. The app will have a single model called `Tweet`, with routes and controllers.
+You will be working as a team collaboratively using Git on this homework. 
+
+We will be making a new Rails app from scratch and a new React app for the front end. The app will have a single model called `Tweet`, with routes and controllers.
 
 The app will have full CRUD functionality through either cURL or Postman.
 
 Rails is a framework that favors **convention** over **configuration**, so it is important to name your folders, files, and classes with the correct combination of upper or lowercase letters, and name them according to whether they are meant to be plural or singular. These conventions are mentioned throughout this walkthrough.
+
+**Half the team should work on the backend and half should work on the front end*
 
 
 ## LET THERE BE LIGHT
@@ -553,6 +557,22 @@ render json: { tweet: Tweet.find(SOMENUMBER), replies: Tweet.find(SOMENUMBER).re
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
 "Commit 15: The show pages shows the tweets and their replies".
+<hr>
+
+
+<hr>
+
+### Create React Front End
+
+Use Create React App to create a front end for the app to display the data. Have a homepage that displays all of the tweets and individual pages for each unique tweet.
+
+The design is totally up to you! Have fun!
+
+<hr>
+
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"Commit 16: React front end created".
 <hr>
 
 
