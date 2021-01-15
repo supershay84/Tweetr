@@ -478,7 +478,22 @@ The commit message should read: <br>
 <hr>
 
 <br>
+
+### Create React Front End
+
+Use Create React App to create a front end for the app to display the data. Have a homepage that displays all of the tweets and individual pages for each unique tweet.
+
+The design is totally up to you! Have fun!
+
 <hr>
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"Commit 16: React front end created".
+<hr>
+
+
+<hr>
+
 
 ## HUNGRY FOR MORE?
 
@@ -557,22 +572,6 @@ render json: { tweet: Tweet.find(SOMENUMBER), replies: Tweet.find(SOMENUMBER).re
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
 "Commit 15: The show pages shows the tweets and their replies".
-<hr>
-
-
-<hr>
-
-### Create React Front End
-
-Use Create React App to create a front end for the app to display the data. Have a homepage that displays all of the tweets and individual pages for each unique tweet.
-
-The design is totally up to you! Have fun!
-
-<hr>
-
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"Commit 16: React front end created".
 <hr>
 
 
