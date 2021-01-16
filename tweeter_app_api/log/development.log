@@ -15,3 +15,41 @@ Migrating to CreateTweets (20210116171725)
   [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1344325399035759420)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (2.7ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Just found this"], ["content", "the square of the hypotenuse is equal to the sum of the squares of the other two sides"], ["author", "Pythagoras570"], ["created_at", "2021-01-16 17:38:26.930565"], ["updated_at", "2021-01-16 17:38:26.930565"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I'm walkin' here"], ["content", "Hey, I'm walkin' here!"], ["author", "Nicky62"], ["created_at", "2021-01-16 17:38:26.936848"], ["updated_at", "2021-01-16 17:38:26.936848"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Kickstarter shoreditch master hashtag plaid cornhole sriracha neutra."], ["content", "When Chuck Norris points to null, null quakes in fear."], ["author", "Dark Bane I"], ["created_at", "2021-01-16 17:38:28.227526"], ["updated_at", "2021-01-16 17:38:28.227526"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Seitan narwhal actually pbr&b austin try-hard taxidermy."], ["content", "Chuck Norris knows the last digit of PI."], ["author", "Mr Alien"], ["created_at", "2021-01-16 17:38:28.232603"], ["updated_at", "2021-01-16 17:38:28.232603"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cliche marfa raw denim plaid goth gentrify 8-bit."], ["content", "Chuck Norris doesn't need a java compiler, he goes straight to .war"], ["author", "Green Beyonder Girl"], ["created_at", "2021-01-16 17:38:28.235496"], ["updated_at", "2021-01-16 17:38:28.235496"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Chicharrones bitters artisan direct trade tilde muggle magic."], ["content", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["author", "Supah Bloodaxe"], ["created_at", "2021-01-16 17:38:28.238594"], ["updated_at", "2021-01-16 17:38:28.238594"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Yuccie messenger bag listicle banjo."], ["content", "Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris."], ["author", "Wolfsbane"], ["created_at", "2021-01-16 17:38:28.241432"], ["updated_at", "2021-01-16 17:38:28.241432"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Umami brooklyn chambray thundercats hammock green juice distillery portland."], ["content", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["author", "Rachel Pirzad Eyes"], ["created_at", "2021-01-16 17:38:28.244202"], ["updated_at", "2021-01-16 17:38:28.244202"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Bespoke twee before they sold out viral brooklyn lomo semiotics."], ["content", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["author", "Binary Machine"], ["created_at", "2021-01-16 17:38:28.247047"], ["updated_at", "2021-01-16 17:38:28.247047"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Actually pickled helvetica irony."], ["content", "Chuck Norris can unit test an entire application with a single assert."], ["author", "Magnificent Mockingbird I"], ["created_at", "2021-01-16 17:38:28.250960"], ["updated_at", "2021-01-16 17:38:28.250960"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Poutine wes anderson vinyl distillery chia goth."], ["content", "Chuck Norris can binary search unsorted data."], ["author", "Magnificent Scorpia IX"], ["created_at", "2021-01-16 17:38:28.253747"], ["updated_at", "2021-01-16 17:38:28.253747"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Lo-fi chillwave meggings swag pbr&b messenger bag."], ["content", "Chuck Norris's beard can type 140 wpm."], ["author", "Red Chuck Norris"], ["created_at", "2021-01-16 17:38:28.256474"], ["updated_at", "2021-01-16 17:38:28.256474"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
