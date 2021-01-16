@@ -135,3 +135,25 @@ Processing by TweetsController#update as */*
 Completed 201 Created in 29ms (Views: 0.3ms | ActiveRecord: 11.7ms | Allocations: 7809)
 
 
+Started DELETE "/tweets/13" for ::1 at 2021-01-16 13:28:58 -0500
+Processing by TweetsController#destroy as */*
+  Parameters: {"tweet"=>{"title"=>"\"bbhdggevehdvdh\"", "content"=>"\"bbnfhbvrhusu mmhbddrtgf gdtsdygyrdtdrtf fudrsrsduyfyufyu\"", "author"=>"\"Mr.Tourettes\""}, "id"=>"13"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:25:in `destroy'
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/tweets_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:25:in `destroy'
+Completed 204 No Content in 17ms (Views: 0.2ms | ActiveRecord: 8.8ms | Allocations: 5361)
+
+
+Started GET "/tweets" for ::1 at 2021-01-16 13:29:05 -0500
+Processing by TweetsController#index as */*
+  Parameters: {"tweet"=>{"title"=>"\"bbhdggevehdvdh\"", "content"=>"\"bbnfhbvrhusu mmhbddrtgf gdtsdygyrdtdrtf fudrsrsduyfyufyu\"", "author"=>"\"Mr.Tourettes\""}}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2044)
+
+
