@@ -121,3 +121,17 @@ Processing by TweetsController#index as */*
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2130)
 
 
+Started PUT "/tweets/13" for ::1 at 2021-01-16 13:27:42 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"tweet"=>{"title"=>"\"bbhdggevehdvdh\"", "content"=>"\"bbnfhbvrhusu mmhbddrtgf gdtsdygyrdtdrtf fudrsrsduyfyufyu\"", "author"=>"\"Mr.Tourettes\""}, "id"=>"13"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `update'
+  [1m[36mTweet Update (2.8ms)[0m  [1m[33mUPDATE "tweets" SET "content" = $1, "updated_at" = $2 WHERE "tweets"."id" = $3[0m  [["content", "\"bbnfhbvrhusu mmhbddrtgf gdtsdygyrdtdrtf fudrsrsduyfyufyu\""], ["updated_at", "2021-01-16 18:27:42.870784"], ["id", 13]]
+  ↳ app/controllers/tweets_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:20:in `update'
+Completed 201 Created in 29ms (Views: 0.3ms | ActiveRecord: 11.7ms | Allocations: 7809)
+
+
