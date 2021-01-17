@@ -167,7 +167,11 @@ Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2044)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1344325399035759420)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2021-01-17 16:17:12 -0500
+=======
+Started GET "/" for ::1 at 2021-01-17 16:17:16 -0500
+>>>>>>> 1e66e2f6c7de4ca0b246754c0bbc2d3e4f675801
   
 ActiveRecord::NoDatabaseError (FATAL:  database "tweeter_app_api_development" does not exist
 ):
@@ -218,7 +222,11 @@ puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
 puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
 puma (5.1.1) lib/puma/server.rb:431:in `process_client'
 puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/favicon.ico" for ::1 at 2021-01-17 16:17:13 -0500
+=======
+Started GET "/tweets" for ::1 at 2021-01-17 16:17:19 -0500
+>>>>>>> 1e66e2f6c7de4ca0b246754c0bbc2d3e4f675801
   
 ActiveRecord::NoDatabaseError (FATAL:  database "tweeter_app_api_development" does not exist
 ):
@@ -269,6 +277,7 @@ puma (5.1.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
 puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
 puma (5.1.1) lib/puma/server.rb:431:in `process_client'
 puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/tweets" for ::1 at 2021-01-17 16:18:12 -0500
   
 ActiveRecord::NoDatabaseError (FATAL:  database "tweeter_app_api_development" does not exist
@@ -659,5 +668,79 @@ Processing by TweetsController#index as HTML
   [1m[36mTweet Load (1.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
   ↳ app/controllers/tweets_controller.rb:5:in `index'
 Completed 200 OK in 43ms (Views: 20.6ms | ActiveRecord: 17.7ms | Allocations: 6544)
+=======
+  [1m[35m (351.7ms)[0m  [1m[35mCREATE DATABASE "tweeter_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (167.9ms)[0m  [1m[35mCREATE DATABASE "tweeter_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (189.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1344325399035759420)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTweets (20210116171725)
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (74.0ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "title" character varying, "content" text, "author" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (41.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210116171725"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-17 21:27:31.246383"], ["updated_at", "2021-01-17 21:27:31.246383"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1344325399035759420)[0m
+  [1m[35m (137.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (9.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "the square of the hypotenuse is equal to the sum of the squares of the other two sides"], ["LIMIT", 1]]
+  [1m[36mTweet Create (4.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Just found this"], ["content", "the square of the hypotenuse is equal to the sum of the squares of the other two sides"], ["author", "Pythagoras570"], ["created_at", "2021-01-17 21:27:51.445737"], ["updated_at", "2021-01-17 21:27:51.445737"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Hey, I'm walkin' here!"], ["LIMIT", 1]]
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I'm walkin' here"], ["content", "Hey, I'm walkin' here!"], ["author", "Nicky62"], ["created_at", "2021-01-17 21:27:51.483876"], ["updated_at", "2021-01-17 21:27:51.483876"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris doesn't pair program."], ["LIMIT", 1]]
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Franzen actually ethical pop-up."], ["content", "Chuck Norris doesn't pair program."], ["author", "Question"], ["created_at", "2021-01-17 21:27:58.118390"], ["updated_at", "2021-01-17 21:27:58.118390"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris' preferred IDE is hexedit."], ["LIMIT", 1]]
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Raw denim pabst shoreditch messenger bag sriracha +1."], ["content", "Chuck Norris' preferred IDE is hexedit."], ["author", "Agent Lyja Strike"], ["created_at", "2021-01-17 21:27:58.149748"], ["updated_at", "2021-01-17 21:27:58.149748"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Project managers never ask Chuck Norris for estimations... ever."], ["LIMIT", 1]]
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Gentrify bicycle rights 8-bit."], ["content", "Project managers never ask Chuck Norris for estimations... ever."], ["author", "Red Sylar"], ["created_at", "2021-01-17 21:27:58.223477"], ["updated_at", "2021-01-17 21:27:58.223477"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "When Chuck Norris gives a method an argument, the method loses."], ["LIMIT", 1]]
+  [1m[36mTweet Create (4.0ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Paleo ethical swag."], ["content", "When Chuck Norris gives a method an argument, the method loses."], ["author", "Synch"], ["created_at", "2021-01-17 21:27:58.251553"], ["updated_at", "2021-01-17 21:27:58.251553"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Anonymous methods and anonymous types are really all called Chuck Norris. They just don't like to boast."], ["LIMIT", 1]]
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Raw denim cray scenester blog."], ["content", "Anonymous methods and anonymous types are really all called Chuck Norris. They just don't like to boast."], ["author", "Illustrious Wiz Kid"], ["created_at", "2021-01-17 21:27:58.272693"], ["updated_at", "2021-01-17 21:27:58.272693"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris can solve the Towers of Hanoi in one move."], ["LIMIT", 1]]
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Kinfolk whatever brunch selvage goth 90's narwhal."], ["content", "Chuck Norris can solve the Towers of Hanoi in one move."], ["author", "Shang-Chi III"], ["created_at", "2021-01-17 21:27:58.285205"], ["updated_at", "2021-01-17 21:27:58.285205"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris can recite π. Backwards."], ["LIMIT", 1]]
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "+1 cleanse raw denim."], ["content", "Chuck Norris can recite π. Backwards."], ["author", "General Absorbing"], ["created_at", "2021-01-17 21:27:58.329733"], ["updated_at", "2021-01-17 21:27:58.329733"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["LIMIT", 1]]
+  [1m[36mTweet Create (2.1ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Offal narwhal 3 wolf moon kitsch retro schlitz."], ["content", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["author", "Dark Walrus"], ["created_at", "2021-01-17 21:27:58.348052"], ["updated_at", "2021-01-17 21:27:58.348052"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["LIMIT", 1]]
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cleanse retro cliche lomo."], ["content", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["author", "The Boom Boom III"], ["created_at", "2021-01-17 21:27:58.369512"], ["updated_at", "2021-01-17 21:27:58.369512"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tweets" WHERE "tweets"."content" = $1 LIMIT $2[0m  [["content", "Chuck Norris's beard can type 140 wpm."], ["LIMIT", 1]]
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Microdosing gentrify franzen pitchfork flexitarian flannel."], ["content", "Chuck Norris's beard can type 140 wpm."], ["author", "Shriek"], ["created_at", "2021-01-17 21:27:58.384653"], ["updated_at", "2021-01-17 21:27:58.384653"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tweets" for ::1 at 2021-01-17 16:28:16 -0500
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (3.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 208ms (Views: 58.8ms | ActiveRecord: 111.6ms | Allocations: 8502)
+>>>>>>> 1e66e2f6c7de4ca0b246754c0bbc2d3e4f675801
 
 
