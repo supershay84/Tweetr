@@ -7,7 +7,7 @@ const Home = () => {
         try {
             const response = await fetch('http://localhost:3000/tweets');
             const data = await response.json();
-            setTweets(data);
+            setTweets(data.tweets);
         } catch (error) {
             console.error(error);
         }
@@ -52,8 +52,8 @@ const Home = () => {
     }
 
     useEffect(() => {
-        // fetchTweets();
-        addTemporaryHardDataWithoutCors();
+        fetchTweets();
+        // addTemporaryHardDataWithoutCors();
     }, [])
 
     return(
@@ -65,6 +65,7 @@ const Home = () => {
                     className="indexTweet"
                     key={tweet.id}
                     >
+                        
                         <h2 className="indexTweetAuthor">{tweet.author}</h2>
                         <h3 className="indexTweetTitle">{tweet.title}</h3>
                         <p className="indexTweetContent">{tweet.content}</p>
