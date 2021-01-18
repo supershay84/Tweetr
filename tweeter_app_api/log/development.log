@@ -825,6 +825,13 @@ Completed 200 OK in 208ms (Views: 58.8ms | ActiveRecord: 111.6ms | Allocations: 
 >>>>>>> 1e66e2f6c7de4ca0b246754c0bbc2d3e4f675801
 
 
+<<<<<<< HEAD
+Started GET "/tweets" for ::1 at 2021-01-17 17:39:50 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 75ms (Views: 70.5ms | ActiveRecord: 18.7ms | Allocations: 4037)
+=======
 Started GET "/tweets" for ::1 at 2021-01-18 13:42:08 -0500
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by TweetsController#index as */*
@@ -932,5 +939,6 @@ Processing by TweetsController#index as */*
   [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
   ↳ app/controllers/tweets_controller.rb:5:in `index'
 Completed 200 OK in 39ms (Views: 12.3ms | ActiveRecord: 18.0ms | Allocations: 8507)
+>>>>>>> 02613a1a38998e3042aad96ff1f816c276881219
 
 
