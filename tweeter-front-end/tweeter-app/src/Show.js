@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 
-const OneTweet = (props) => {
+const Show = (props) => {
     const [aTweet, setATweet] = useState ({});
 
     const fetchATweet = async () => {
         try {
-            const response = await fetch(`https://lcoalhost:3000/tweets/${id}`)
+            const response = await fetch(`https://lcoalhost:3000/tweets/${props.match.params.id}`)
             const data = await response.json();
             setATweet(data.tweets);
         } catch(error) {
@@ -25,3 +25,5 @@ const OneTweet = (props) => {
 
     )
 }
+
+export default Show;
