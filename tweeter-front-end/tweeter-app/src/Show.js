@@ -7,7 +7,7 @@ const OneTweet = (props) => {
         try {
             const response = await fetch(`https://lcoalhost:3000/tweets/${id}`)
             const data = await response.json();
-            setATweet(data);
+            setATweet(data.tweets);
         } catch(error) {
             console.log(error);
         }
@@ -18,10 +18,10 @@ const OneTweet = (props) => {
 
     return (
         <div>
-        <h3 className="TweetAuthor"> {aTweet.author}</h3>
-        <h3 className="TweetTitle"> {aTweet.title}</h3>
-        <p className="TweetContent">{aTweet.content}</p>
+        <h3 className="TweetAuthor"> {aTweet.author.id}</h3>
+        <h3 className="TweetTitle"> {aTweet.title.id}</h3>
+        <p className="TweetContent">{aTweet.content.id}</p>
         </div>
-        
+
     )
 }
