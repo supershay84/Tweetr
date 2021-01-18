@@ -4,34 +4,34 @@ import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
 import Home from './Home'
 
 function App() {
   return (
     <div className="App">
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-  <Navbar.Brand href="#home">Tweetr</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#features">Home</Nav.Link>
-      <Nav.Link href="#pricing">Explore</Nav.Link>
-      <NavDropdown title="Profile" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Support</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-    <Nav>
-      <Nav.Link href="#deets">My DMs</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Notifications
-      </Nav.Link>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
+      <Navbar bg="primary" variant="dark" expand="lg">
+        <Navbar.Brand href="#home">Tweetr</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Explore</Nav.Link>
+            <NavDropdown title="Profile" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Log Out</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Support</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
     {/* Switch */}
       <Link className="homeLink" to="/tweets">Home</Link>
       <Switch>
