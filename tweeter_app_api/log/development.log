@@ -926,3 +926,11 @@ Processing by TweetsController#index as */*
 Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 2009)
 
 
+Started GET "/tweets" for ::1 at 2021-01-18 15:45:12 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as */*
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 12.3ms | ActiveRecord: 18.0ms | Allocations: 8507)
+
+
