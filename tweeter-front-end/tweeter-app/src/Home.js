@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [tweets, setTweets] =  useState([]);
@@ -26,10 +27,17 @@ const Home = () => {
                     className="indexTweet"
                     key={tweet.id}
                     >
-                        
-                        <h2 className="indexTweetAuthor">{tweet.author}</h2>
-                        <h3 className="indexTweetTitle">{tweet.title}</h3>
-                        <p className="indexTweetContent">{tweet.content}</p>
+                        <Link
+                            
+                            author={tweet.author}
+                            title={tweet.title}
+                            content={tweet.content}
+                            to={`tweets/${tweet.id}`}
+                        >
+                            <h2 className="indexTweetAuthor">{tweet.author}</h2>
+                            <h3 className="indexTweetTitle">{tweet.title}</h3>
+                            <p className="indexTweetContent">{tweet.content}</p>
+                        </Link>
                     </div>
                     )
                 })

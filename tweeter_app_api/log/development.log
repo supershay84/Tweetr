@@ -941,3 +941,38 @@ Processing by TweetsController#index as */*
 Completed 200 OK in 136ms (Views: 132.4ms | ActiveRecord: 27.0ms | Allocations: 4046)
 
 
+Started GET "/tweets" for ::1 at 2021-01-18 16:20:53 -0500
+Processing by TweetsController#index as */*
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 19.1ms | Allocations: 4045)
+
+
+Started GET "/tweets" for ::1 at 2021-01-18 16:25:30 -0500
+Processing by TweetsController#index as */*
+  [1m[36mTweet Load (11.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 43.4ms | ActiveRecord: 11.4ms | Allocations: 2028)
+
+
+Started GET "/tweets" for ::1 at 2021-01-18 16:25:52 -0500
+Processing by TweetsController#index as */*
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 2028)
+
+
+Started GET "/tweets" for ::1 at 2021-01-18 16:26:04 -0500
+Processing by TweetsController#index as */*
+  [1m[36mTweet Load (3.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 3.9ms | Allocations: 2009)
+
+
+Started GET "/tweets" for ::1 at 2021-01-18 16:26:22 -0500
+Processing by TweetsController#index as */*
+  [1m[36mTweet Load (2.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:5:in `index'
+Completed 200 OK in 133ms (Views: 124.7ms | ActiveRecord: 2.9ms | Allocations: 2009)
+
+
