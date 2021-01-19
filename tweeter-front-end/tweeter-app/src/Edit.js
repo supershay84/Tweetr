@@ -27,7 +27,7 @@ export default (props) => {
         )
         props.updatedTweets([...filteredTweets, data])
         } catch (err) {
-            caonsole.error(err);
+            console.error(err);
         }
 
     }
