@@ -55,7 +55,7 @@ const Home = () => {
                         content={tweet.content}
                         to={`tweets/${tweet.id}`}
                         >
-                            <h2 className="indexTweetAuthor">{tweet.author}</h2>
+                            <h4 className="indexTweetAuthor">{tweet.author}</h4>
                             <h3 className="indexTweetTitle">{tweet.title}</h3>
                             <p className="indexTweetContent">{tweet.content}</p>
                         </Link>
