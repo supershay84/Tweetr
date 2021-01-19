@@ -54,16 +54,16 @@ const Home = () => {
                         className="indexTweet"
                         key={tweet.id}
                         >
+                            <h2 className="indexTweetAuthor">{tweet.author}</h2>
                             <Link
                             author={tweet.author}
                             title={tweet.title}
                             content={tweet.content}
-                            to={`tweets/${tweet.id}`}
-                            >
-                                <h4 className="indexTweetAuthor">{tweet.author}</h4>
-                                <h3 className="indexTweetTitle">{tweet.title}</h3>
-                                <p className="indexTweetContent">{tweet.content}</p>
-                            </Link>
+                            to={`/tweets/${tweet.id}`}
+                        >
+                            <h3 className="indexTweetTitle">{tweet.title}</h3></Link>
+                            <p className="indexTweetContent">{tweet.content}</p>
+                                
                             <button onClick={(event) => {
                                 deleteTweet(tweet.id)}}
                             >Delete Tweet by {tweet.author}</button>

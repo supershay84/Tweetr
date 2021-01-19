@@ -7,6 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Home from './Home'
+import Show from './Show'
+
 
 function App() {
   return (
@@ -34,9 +36,9 @@ function App() {
       </Navbar>
     {/* Switch */}
       <Switch>
-        {/* <Route exact path="/tweets/:id" render={routerProps => {
-          <OneTweet {...routerProps} />
-        }}/> */}
+        <Route exact path="/tweets/:id" render={routerProps => {
+          return <Show {...routerProps} />
+        }}/>
         <Route path="/tweets" component={Home} />
       </Switch>
       {/* <footer className="teamAwesomeInc"> created by Team Awesome Inc.</footer> */}
