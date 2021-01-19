@@ -16,7 +16,7 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/tweets">Home</Nav.Link>
             <Nav.Link href="#link">Explore</Nav.Link>
             <NavDropdown title="Profile" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
@@ -33,7 +33,6 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
     {/* Switch */}
-      <Link className="homeLink" to="/tweets">Home</Link>
       <Switch>
         {/* <Route exact path="/tweets/:id" render={routerProps => {
           <OneTweet {...routerProps} />
