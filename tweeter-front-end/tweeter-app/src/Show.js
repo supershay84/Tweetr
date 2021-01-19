@@ -19,12 +19,12 @@ const Show = (props) => {
     }, []);
     
     return (
-        <div>
-        <h3 className="TweetAuthor"> {aTweet.author}</h3>
-        <h3 className="TweetTitle"> {aTweet.title}</h3>
-        <p className="TweetContent">{aTweet.content}</p>
+        <div class="tweetform">
+            <h3 className="TweetAuthor">@{aTweet.author}</h3>
+            <h3 className="TweetTitle"> {aTweet.title}</h3>
+            <p className="TweetContent">{aTweet.content}</p>
 
-        <Edit aTweet={aTweet} setATweet={setATweet}/>
+            <Edit aTweet={aTweet} setATweet={setATweet}/>
         </div>
 
     )

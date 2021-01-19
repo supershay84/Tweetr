@@ -56,7 +56,7 @@ const Home = () => {
                         className="indexTweet"
                         key={tweet.id}
                         >
-                            <h2 className="indexTweetAuthor">{tweet.author}</h2>
+                            <h2 className="indexTweetAuthor">@{tweet.author}</h2>
                              <Link
                             author={tweet.author}
                             title={tweet.title}

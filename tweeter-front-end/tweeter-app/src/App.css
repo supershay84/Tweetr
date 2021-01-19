@@ -3,8 +3,10 @@
   background: url(https://res.cloudinary.com/dzgeqcksj/image/upload/o_84,q_69,r_30/v1611018794/IMG_4310_old0r0.jpg);
   background-size: 90%;
   background-repeat: no-repeat;
+  background-position-y: top;
   /* background-color: floralwhite; */
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -44,6 +46,22 @@
 }
 
 .tweetform {
+  text-align: left;
+  border: 1px dashed #61dafb;
+  border-radius: 3px;
+  position: relative;
+  margin: 1% auto auto auto;
+  width: 350px;
+  padding: 25px 20px;
+  box-sizing: content-box;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showpage {
   text-align: center;
   border: 1px dashed #61dafb;
   border-radius: 3px;
