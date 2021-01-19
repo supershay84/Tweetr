@@ -14,30 +14,54 @@ const Home = () => {
         }
     }
 
+    const deleteTweet = async (id) => {
+        try {
+            const response = await fetch
+            (
+                `http://localhost:3000/tweets/${id}`, 
+                {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                }
+            )
+            const data = await response;
+            const filteredTweets = tweets.filter(tweet => tweet.id !== data.id);
+            setTweets(filteredTweets);
+        } catch(error) {
+            console.error(error);
+        }
+    }
+
     useEffect(() => {
         fetchTweets();
     }, [])
+    // }, [tweets])
+
 
     return(
         <div className="indexAllTweets">
             {
-                tweets.map(tweet => {
+                tweets.map((tweet, index) => {
                     return (
                     <div
                     className="indexTweet"
                     key={tweet.id}
                     >
                         <Link
-                            
-                            author={tweet.author}
-                            title={tweet.title}
-                            content={tweet.content}
-                            to={`tweets/${tweet.id}`}
+                        author={tweet.author}
+                        title={tweet.title}
+                        content={tweet.content}
+                        to={`tweets/${tweet.id}`}
                         >
                             <h4 className="indexTweetAuthor">{tweet.author}</h4>
                             <h3 className="indexTweetTitle">{tweet.title}</h3>
                             <p className="indexTweetContent">{tweet.content}</p>
                         </Link>
+                        <button onClick={(event) => {
+                            deleteTweet(tweet.id)}}
+                        >Delete Tweet by {tweet.author}</button>
                     </div>
                     )
                 })
