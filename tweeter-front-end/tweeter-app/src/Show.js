@@ -7,9 +7,9 @@ const Show = (props) => {
 
     const fetchATweet = async () => {
         try {
-            const response = await fetch(`https://lcoalhost:3000/tweets/${props.match.params.id}`)
+            const response = await fetch(`http://localhost:3000/tweets/${props.match.params.id}`)
             const data = await response.json();
-            setATweet(data.tweets);
+            setATweet(data.tweet);
         } catch(error) {
             console.log(error);
         }
@@ -17,12 +17,12 @@ const Show = (props) => {
     useEffect(() => {
         fetchATweet();
     }, []);
-
+    
     return (
         <div>
-        <h3 className="TweetAuthor"> {aTweet.author.id}</h3>
-        <h3 className="TweetTitle"> {aTweet.title.id}</h3>
-        <p className="TweetContent">{aTweet.content.id}</p>
+        <h3 className="TweetAuthor"> {aTweet.author}</h3>
+        <h3 className="TweetTitle"> {aTweet.title}</h3>
+        <p className="TweetContent">{aTweet.content}</p>
 
         <Edit />
         </div>

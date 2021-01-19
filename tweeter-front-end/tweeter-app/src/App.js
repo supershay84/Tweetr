@@ -37,7 +37,7 @@ function App() {
     {/* Switch */}
       <Switch>
         <Route exact path="/tweets/:id" render={routerProps => {
-          <Show {...routerProps} />
+          return <Show {...routerProps} />
         }}/>
         <Route path="/tweets" component={Home} />
       </Switch>

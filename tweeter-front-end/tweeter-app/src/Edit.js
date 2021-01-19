@@ -16,7 +16,7 @@ export default (props) => {
         });
         event.currentTarget.reset();
         try {
-            const response = await fetch (`https://lcoalhost:3000/tweets/${props.match.params.id}`,
+            const response = await fetch (`http://lcoalhost:3000/tweets/${props.match.params.id}`,
             {method: "PUT",
             headers: {'Content-Type': 'application/json'},
             body: body,
@@ -37,7 +37,7 @@ export default (props) => {
             Title: <input type="text" ref={updateTitleRef}/>
             Content: <input type="text" ref={updateContentRef}/>
             Author: <input type="text" ref={updateAuthorRef}/>
-            <input type="sumbit" value= "Update Tweet"/>
+            <input type="submit" value="Update Tweet"/>
         </form>
     )
 }
