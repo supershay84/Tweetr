@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
 
 const Home = () => {
     const [tweets, setTweets] =  useState([]);
@@ -59,9 +60,9 @@ const Home = () => {
                             <h3 className="indexTweetTitle">{tweet.title}</h3>
                             <p className="indexTweetContent">{tweet.content}</p>
                         </Link>
-                        <button onClick={(event) => {
+                        <Button variant="outline-primary" onClick={(event) => {
                             deleteTweet(tweet.id)}}
-                        >Delete Tweet by {tweet.author}</button>
+                        >Delete Tweet by {tweet.author}</Button>
                     </div>
                     )
                 })

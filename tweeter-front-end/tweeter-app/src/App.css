@@ -1,9 +1,9 @@
 .App {
   text-align: left;
-  /* background: url(https://res.cloudinary.com/dzgeqcksj/image/upload/o_84,q_69,r_30/v1611018794/IMG_4310_old0r0.jpg); */
-  /* background-size: 85%;
-  background-repeat: no-repeat; */
-  background-color: floralwhite;
+  background: url(https://res.cloudinary.com/dzgeqcksj/image/upload/o_84,q_69,r_30/v1611018794/IMG_4310_old0r0.jpg);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  /* background-color: floralwhite; */
 }
 
 .App-logo {
