@@ -35,7 +35,7 @@ const Home = () => {
                             to={`tweets/${tweet.id}`}
                         > */}
                             <h2 className="indexTweetAuthor">{tweet.author}</h2>
-                            <a href={`/${tweet.id}`}><h3 className="indexTweetTitle">{tweet.title}</h3></a>
+                            <a href={`/tweets/${tweet.id}`}><h3 className="indexTweetTitle">{tweet.title}</h3></a>
                             <p className="indexTweetContent">{tweet.content}</p>
                         {/* </Link> */}
                     </div>

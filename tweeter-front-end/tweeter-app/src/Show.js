@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import Edit from './Edit'
+
 
 const Show = (props) => {
     const [aTweet, setATweet] = useState ({});
@@ -21,6 +23,8 @@ const Show = (props) => {
         <h3 className="TweetAuthor"> {aTweet.author.id}</h3>
         <h3 className="TweetTitle"> {aTweet.title.id}</h3>
         <p className="TweetContent">{aTweet.content.id}</p>
+
+        <Edit />
         </div>
 
     )
