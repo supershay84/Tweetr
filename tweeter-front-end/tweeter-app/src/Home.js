@@ -47,7 +47,6 @@ const Home = () => {
     return(
 
         <div className="homePage">
-            <h2>Make New Tweet!</h2>
             <NewTweetForm updateTweets={setTweets} tweets={tweets}/>
             <div className="indexAllTweets">
                 {
@@ -72,7 +71,7 @@ const Home = () => {
                                 deleteTweet(tweet.id)}}
                             > 
 
-                                Delete Tweet by {tweet.author} 
+                                Delete
                                 </Button>
                         </div>
                         )

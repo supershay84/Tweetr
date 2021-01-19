@@ -40,12 +40,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: left;
 }
 
-/* position: relative;
-
-margin: 8% auto auto auto;
-width: 450px;
-padding: 25px 50px;
-display: table;
-background-color: #fff; */
+.tweetform {
+  text-align: center;
+  border: 1px dashed #61dafb;
+  border-radius: 3px;
+  position: relative;
+  margin: 1% auto auto auto;
+  width: 350px;
+  padding: 25px 20px;
+  box-sizing: content-box;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
