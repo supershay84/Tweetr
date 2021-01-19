@@ -24,7 +24,7 @@ const Show = (props) => {
         <h3 className="TweetTitle"> {aTweet.title}</h3>
         <p className="TweetContent">{aTweet.content}</p>
 
-        <Edit />
+        <Edit aTweet={aTweet} setATweet={setATweet}/>
         </div>
 
     )

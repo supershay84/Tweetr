@@ -16,16 +16,17 @@ export default (props) => {
         });
         event.currentTarget.reset();
         try {
-            const response = await fetch (`http://lcoalhost:3000/tweets/${props.match.params.id}`,
+            console.log(props)
+            const response = await fetch (`http://localhost:3000/tweets/${props.aTweet.id}`,
             {method: "PUT",
             headers: {'Content-Type': 'application/json'},
             body: body,
         });
         const data = await response.json();
-        const filteredTweets = props.allTweets.filter(
-            (allTweets => allTweets._id !== data.id)
-        )
-        props.updatedTweets([...filteredTweets, data])
+        // const filteredTweets = props.allTweets.filter(
+        //     (allTweets => allTweets._id !== data.id)
+        // )
+        props.setATweet(data)
         } catch (err) {
             console.error(err);
         }
