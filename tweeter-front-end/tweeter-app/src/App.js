@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="primary" variant="dark" expand="lg">
-        <Navbar.Brand href="#home">Tweetr</Navbar.Brand>
+        <Navbar.Brand href="/tweets">Tweetr</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

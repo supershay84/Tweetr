@@ -1,4 +1,7 @@
 import { useRef } from 'react';
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 export default (props) => {
     const updateTitleRef = useRef(null);
@@ -34,11 +37,29 @@ export default (props) => {
     }
 
     return(
-        <form onSubmit={updateTweet}>
-            Title: <input type="text" ref={updateTitleRef}/>
-            Content: <input type="text" ref={updateContentRef}/>
-            Author: <input type="text" ref={updateAuthorRef}/>
-            <input type="submit" value="Update Tweet"/>
-        </form>
+        // <form onSubmit={updateTweet}>
+        //     Title: <input type="text" ref={updateTitleRef}/>
+        //     Content: <input type="text" ref={updateContentRef}/>
+        //     Author: <input type="text" ref={updateAuthorRef}/>
+        //     <input type="submit" value="Update Tweet"/>
+        // </form>
+        <Form onSubmit={updateTweet}>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Edit Text Here:</Form.Label>
+                <Form.Control as="textarea" rows={3} input type="text" ref={updateContentRef} />
+            </Form.Group>
+            <Form.Row>
+                <Col>
+                <Form.Control placeholder="edit username" type="text" ref={updateAuthorRef}/>
+                </Col>
+                <Col>
+                <Form.Control placeholder="edit title" type="text" ref={updateTitleRef}/>
+                </Col>
+            </Form.Row>
+                {/* <input type="text" ref={authorInput}/> */}
+                {/* <input type="text" ref={titleInput}/> */}
+                {/* <input type="text" ref={contentInput}/> */}
+                <Button variant="outline-primary" type="submit" value="Update Tweet">Update Tweet!</Button>
+            </Form>
     )
 }

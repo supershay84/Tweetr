@@ -1,4 +1,7 @@
 import { useRef } from 'react'
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 const NewTweetForm = (props) => {
     const authorInput = useRef(null);
@@ -36,13 +39,25 @@ const NewTweetForm = (props) => {
 
     
     return(
-        <div>
-            <form onSubmit={createTweet}>
-                <input type="text" ref={authorInput}/>
-                <input type="text" ref={titleInput}/>
-                <input type="text" ref={contentInput}/>
-                <input type="submit" value="Post Tweet!"/> 
-            </form>
+        <div class="tweetform">
+            <Form onSubmit={createTweet}>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label>What's going on?</Form.Label>
+                <Form.Control as="textarea" rows={3} input type="text" ref={contentInput} />
+            </Form.Group>
+            <Form.Row>
+                <Col>
+                <Form.Control placeholder="username" type="text" ref={authorInput} />
+                </Col>
+                <Col>
+                <Form.Control placeholder="title" type="text" ref={titleInput}/>
+                </Col>
+            </Form.Row>
+                {/* <input type="text" ref={authorInput}/> */}
+                {/* <input type="text" ref={titleInput}/> */}
+                {/* <input type="text" ref={contentInput}/> */}
+                <Button variant="outline-primary" type="submit">Tweet!</Button>
+            </Form>
         </div>
     )
 }
