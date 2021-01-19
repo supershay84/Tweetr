@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
+// import Media from 'react-bootstrap/Media';
 
 const Home = () => {
     const [tweets, setTweets] =  useState([]);
@@ -48,22 +49,23 @@ const Home = () => {
                     return (
                     <div
                     className="indexTweet"
-                    key={tweet.id}
-                    >
-                        <Link
-                        author={tweet.author}
-                        title={tweet.title}
-                        content={tweet.content}
-                        to={`tweets/${tweet.id}`}
-                        >
-                            <h4 className="indexTweetAuthor">{tweet.author}</h4>
-                            <h3 className="indexTweetTitle">{tweet.title}</h3>
-                            <p className="indexTweetContent">{tweet.content}</p>
+                    key={tweet.id}>
+                            <Link
+                            author={tweet.author}
+                            title={tweet.title}
+                            content={tweet.content}
+                            to={`tweets/${tweet.id}`}
+                            >
+                    
+                        <h4 className="indexTweetAuthor">{tweet.author}</h4>
+                        <h3 className="indexTweetTitle">{tweet.title}</h3>
+                        <p className="indexTweetContent">{tweet.content}</p>
                         </Link>
-                        <Button variant="outline-primary" onClick={(event) => {
-                            deleteTweet(tweet.id)}}
-                        >Delete Tweet by {tweet.author}</Button>
+                            <Button variant="outline-primary" onClick={(event) => {
+                                deleteTweet(tweet.id)}}
+                            >Delete Tweet by {tweet.author}</Button>
                     </div>
+                    
                     )
                 })
             }
