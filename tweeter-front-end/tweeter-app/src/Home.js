@@ -36,8 +36,8 @@ const Home = () => {
 
     useEffect(() => {
         fetchTweets();
-    }, [])
-    // }, [tweets])
+    // }, [])
+    }, [tweets])
 
 
     return(
